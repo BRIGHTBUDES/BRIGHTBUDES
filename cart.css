@@ -1,0 +1,106 @@
+/* Cart Page Layout */
+.cart-container {
+    padding: 50px 20px;
+}
+
+.cart-container h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #FF6F61;
+    margin-bottom: 30px;
+}
+
+/* Cart Items */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item .item-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item .item-details h3 {
+    font-size: 18px;
+}
+
+.cart-item .item-details p {
+    color: #333;
+    font-size: 16px;
+}
+
+.cart-item .price {
+    font-size: 20px;
+    color: #28a745;
+}
+
+.cart-item .remove-btn {
+    background-color: #FF6F61;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item .remove-btn:hover {
+    background-color: #FF4F3F;
+}
+/* Styles for the Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #e68900;
+    transform: translateY(-3px);
+}
