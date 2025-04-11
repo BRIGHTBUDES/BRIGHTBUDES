@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shop - GlowLume</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GlowLume</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cart.html" id="cart-icon">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="shop-container">
+        <h2 class="shop-title">Our Lighting Products</h2>
+        <div class="product-grid">
+            <!-- Products -->
+            <div class="product-card">
+                <img src="eb6mi_512.webp" alt="4 WAY LED" />
+                <h3>4 WAY LED </h3>
+                <p>₹599 </p>
+                <button onclick="addToCart('4 WAY LED', 599)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="plks5_512.webp" alt="Lamp Projection">
+                <h3>Lamp Projection </h3>
+                <p>₹799</p>
+                <button onclick="addToCart('Lamp projection ', 799)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="mtn2g_512.webp" alt="Love room">
+                <h3> Love Room </h3>
+                <p>₹499</p>
+                <button onclick="addToCart('Love room ', 499)">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GlowLume | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Add to Cart Function
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name, price });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartIcon(cart.length);
+            alert(`${name} has been added to your cart!`);
+        }
+
+        // Update cart icon
+        function updateCartIcon(count) {
+            const icon = document.getElementById("cart-icon");
+            if (icon) icon.textContent = `Cart (${count})`;
+        }
+
+        // On Load
+        window.onload = () => {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            updateCartIcon(cart.length);
+        };
+    </script>
+</body>
+</html>
